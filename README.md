@@ -9,6 +9,8 @@ One-click prompt enhancement for ChatGPT, Claude, and Google Gemini — a Manife
 - 🌍 **i18n**: Japanese & English shipped; structure ready for 22 languages
 - 🎨 Dark / light themes, 380 px side panel, WCAG 2.1 AA contrast
 
+**Privacy policy:** [docs/PRIVACY_POLICY.md](./docs/PRIVACY_POLICY.md) (use the GitHub “Raw” URL in the Chrome Web Store if you need a public link.)
+
 ## Requirements
 
 - Node.js 20 LTS or later
