@@ -33,7 +33,6 @@ export default defineManifest({
     {
       matches: [
         "https://chatgpt.com/*",
-        "https://chat.openai.com/*",
         "https://claude.ai/*",
         "https://gemini.google.com/*",
       ],
@@ -41,10 +40,9 @@ export default defineManifest({
       run_at: "document_idle",
     },
   ],
-  permissions: ["storage", "sidePanel", "activeTab", "scripting"],
+  permissions: ["storage", "sidePanel", "activeTab"],
   host_permissions: [
     "https://chatgpt.com/*",
-    "https://chat.openai.com/*",
     "https://claude.ai/*",
     "https://gemini.google.com/*",
     "https://api.openai.com/*",
@@ -72,7 +70,6 @@ export default defineManifest({
       resources: ["public/icons/*"],
       matches: [
         "https://chatgpt.com/*",
-        "https://chat.openai.com/*",
         "https://claude.ai/*",
         "https://gemini.google.com/*",
       ],

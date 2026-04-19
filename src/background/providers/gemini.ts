@@ -15,12 +15,13 @@ interface GeminiResponse {
 export async function enhanceWithGemini(args: EnhanceArgs): Promise<string> {
   const { apiKey, model, systemPrompt, userPrompt, signal, temperature } = args;
   const url =
-    `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(apiKey)}`;
+    `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`;
   const response = await fetch(url, {
     method: "POST",
     signal,
     headers: {
       "Content-Type": "application/json",
+      "x-goog-api-key": apiKey,
     },
     body: JSON.stringify({
       systemInstruction: { role: "system", parts: [{ text: systemPrompt }] },

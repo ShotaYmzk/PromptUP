@@ -560,6 +560,9 @@ function showToast(
 }
 
 function setPanelLoading(s: ContentState, loading: boolean) {
+  s.buttonLoading = loading;
+  s.button.disabled = loading;
+  refreshTooltip(s);
   s.reviewLoading = loading;
   s.panelEls.loading.hidden = !loading;
   s.panelEls.enhancedArea.hidden = loading;

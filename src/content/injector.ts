@@ -114,7 +114,7 @@ const gemini: TargetAdapter = {
 
 export function resolveAdapter(): TargetAdapter | null {
   const host = location.hostname;
-  if (host.endsWith("chatgpt.com") || host.endsWith("chat.openai.com")) return chatgpt;
+  if (host.endsWith("chatgpt.com")) return chatgpt;
   if (host.endsWith("claude.ai")) return claude;
   if (host.endsWith("gemini.google.com")) return gemini;
   return null;

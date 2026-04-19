@@ -156,16 +156,20 @@ async function handleEnhance(req: EnhanceRequest): Promise<EnhanceResponse> {
     }
     return { ok: true, text: sanitizeEnhanced(enhanced) };
   } catch (error) {
+    const sanitizedMessage = sanitizeErrorMessage(
+      (error as Error)?.message,
+      config.apiKey,
+    );
     if ((error as Error).name === "AbortError") {
       return errResponse("TIMEOUT");
     }
     if (error instanceof ProviderError) {
-      return errResponse(error.code, error.message);
+      return errResponse(error.code, sanitizeErrorMessage(error.message, config.apiKey));
     }
     if (error instanceof TypeError) {
-      return errResponse("NETWORK", error.message);
+      return errResponse("NETWORK", sanitizedMessage);
     }
-    return errResponse("UNKNOWN", (error as Error)?.message);
+    return errResponse("UNKNOWN", sanitizedMessage);
   } finally {
     clearTimeout(timer);
   }
@@ -173,6 +177,18 @@ async function handleEnhance(req: EnhanceRequest): Promise<EnhanceResponse> {
 
 function errResponse(code: EnhanceErrorCode, message?: string): EnhanceResponse {
   return { ok: false, error: code, message };
+}
+
+function sanitizeErrorMessage(message: string | undefined, apiKey: string): string | undefined {
+  if (!message) return message;
+  let sanitized = message;
+  if (apiKey) {
+    sanitized = sanitized.split(apiKey).join("[REDACTED_API_KEY]");
+  }
+  return sanitized.replace(
+    /(Bearer\s+|x-api-key[:=]\s*|key=)[^\s&]+/gi,
+    "$1[REDACTED]",
+  );
 }
 
 /**
