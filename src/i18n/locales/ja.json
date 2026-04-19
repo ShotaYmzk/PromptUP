@@ -1,0 +1,202 @@
+{
+  "app": {
+    "name": "PromptUP",
+    "tagline": "プロンプトをワンクリックで強化"
+  },
+  "common": {
+    "save": "保存",
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "edit": "編集",
+    "close": "閉じる",
+    "confirm": "OK",
+    "back": "戻る",
+    "add": "追加",
+    "search": "検索",
+    "loading": "読み込み中…",
+    "empty": "まだ何もありません",
+    "required": "必須",
+    "optional": "任意",
+    "copy": "コピー",
+    "copied": "コピーしました"
+  },
+  "nav": {
+    "library": "ライブラリ",
+    "settings": "設定",
+    "openSidePanel": "サイドパネルを開く",
+    "openOptions": "設定を開く"
+  },
+  "popup": {
+    "recent": "最近使ったプロンプト",
+    "noRecent": "まだ履歴はありません",
+    "openLibrary": "ライブラリを開く",
+    "quickSearchHint": "{{key}} でクイック検索"
+  },
+  "library": {
+    "title": "プロンプトライブラリ",
+    "newPrompt": "新規プロンプト",
+    "searchPlaceholder": "タイトル・本文・タグを検索",
+    "allPrompts": "すべてのプロンプト",
+    "uncategorized": "未分類",
+    "newFolder": "新規フォルダ",
+    "folderName": "フォルダ名",
+    "renameFolder": "フォルダ名を変更",
+    "deleteFolder": "フォルダを削除",
+    "confirmDeleteFolder": "このフォルダを削除しますか？中のプロンプトは未分類へ移動します。",
+    "noPrompts": "条件に一致するプロンプトはありません",
+    "totalCount": "{{count}}件のプロンプト",
+    "insert": "挿入",
+    "append": "追加挿入",
+    "appendHint": "既に入力中の内容の後ろに追記します",
+    "enhance": "強化して挿入",
+    "usageCount": "{{count}}回使用",
+    "sectionLabel": "ライブラリ",
+    "resizeSidebar": "幅をドラッグで変更・ダブルクリックでリセット"
+  },
+  "pins": {
+    "sectionLabel": "ピン留め",
+    "empty": "まだピン留めされたプロンプトはありません",
+    "pin": "ピン留め",
+    "unpin": "ピン解除",
+    "pinned": "ピン留め済み",
+    "limitReached": "ピン留めは最大{{max}}件までです",
+    "count": "{{count}} / {{max}} ピン",
+    "remaining": "残り{{count}}件",
+    "sort": {
+      "label": "並び替え",
+      "manual": "手動",
+      "lastUsed": "最終使用"
+    },
+    "insert": "挿入",
+    "append": "追加",
+    "appendHint": "既に入力中の内容の後ろに追記します",
+    "enhance": "強化",
+    "overrides": "ピン固有設定あり",
+    "configure": "このピンの設定を編集",
+    "variableBadge": "変数あり",
+    "delete": "ライブラリから削除",
+    "confirmDelete": "このプロンプトをライブラリからも完全に削除しますか？（ピン解除だけなら 📌 アイコンを再度クリックしてください）",
+    "collapse": "折りたたむ",
+    "expand": "展開する",
+    "shortcutHint": "1〜9 キーで上位9件をすぐ挿入",
+    "pinSettings": {
+      "title": "ピン固有の設定",
+      "description": "このピンからの強化・挿入だけに適用されます。ライブラリ本体やデフォルト設定は変わりません。",
+      "modelOverride": "モデルの上書き",
+      "modelOverridePlaceholder": "未指定ならデフォルト",
+      "temperature": "Temperature",
+      "temperatureHint": "0.0（厳密）〜 2.0（発散的）",
+      "systemPromptOverride": "追加のシステム指示",
+      "systemPromptPlaceholder": "例：コード生成用。Python で。短い解説を添えて。",
+      "targetService": "挿入先",
+      "targetServiceAuto": "アクティブタブに挿入",
+      "targetServiceChatgpt": "ChatGPT",
+      "targetServiceClaude": "Claude",
+      "targetServiceGemini": "Gemini",
+      "reset": "このピンの設定をクリア"
+    }
+  },
+  "prompt": {
+    "title": "タイトル",
+    "titlePlaceholder": "例：丁寧なメール書き換え",
+    "body": "プロンプト本文",
+    "bodyPlaceholder": "プロンプトを入力。{{変数名}} でプレースホルダーを定義できます。",
+    "description": "説明",
+    "descriptionPlaceholder": "短い説明（任意）",
+    "tags": "タグ",
+    "tagsPlaceholder": "カンマ区切り（例: メール, 日本語）",
+    "folder": "フォルダ",
+    "variablesDetected": "検出された変数",
+    "noVariables": "変数なし",
+    "createdAt": "作成",
+    "updatedAt": "更新",
+    "errors": {
+      "titleRequired": "タイトルは必須です",
+      "bodyRequired": "本文は必須です",
+      "titleTooLong": "タイトルは100文字以内で入力してください",
+      "bodyTooLong": "本文は10,000文字以内で入力してください",
+      "descriptionTooLong": "説明は300文字以内で入力してください"
+    }
+  },
+  "variables": {
+    "dialogTitle": "変数を入力",
+    "insert": "挿入",
+    "preview": "プレビュー"
+  },
+  "options": {
+    "title": "PromptUP 設定",
+    "openFullPage": "別タブで開く",
+    "sections": {
+      "provider": "AIプロバイダ",
+      "appearance": "外観",
+      "enhancement": "強化設定"
+    },
+    "provider": {
+      "label": "使用するプロバイダ",
+      "openai": "OpenAI",
+      "anthropic": "Anthropic (Claude)",
+      "gemini": "Google Gemini",
+      "apiKey": "APIキー",
+      "apiKeyHint": "この端末にのみ保存され、軽量な難読化が施されます。",
+      "model": "モデル",
+      "showKey": "表示",
+      "hideKey": "隠す",
+      "getKey": "APIキーを取得",
+      "save": "設定を保存",
+      "saved": "設定を保存しました"
+    },
+    "appearance": {
+      "theme": "テーマ",
+      "themeDark": "ダーク",
+      "themeLight": "ライト",
+      "language": "言語",
+      "languageAuto": "ブラウザから自動検出"
+    },
+    "enhancement": {
+      "systemPrompt": "強化用システムプロンプト",
+      "systemPromptHint": "強化リクエストごとに、各プロバイダへ system prompt として送る中核指示です。",
+      "userPromptPrefix": "強化用ユーザープロンプト接頭文",
+      "userPromptPrefixHint": "モデルへ送るユーザーメッセージの <prompt>...</prompt> の前に付与されます。",
+      "customInstruction": "カスタム強化指示",
+      "customInstructionHint": "AIへの強化依頼プロンプトの末尾に追加されます。",
+      "customInstructionPlaceholder": "例：トーンは丁寧・簡潔に。"
+    }
+  },
+  "review": {
+    "title": "PromptUPで強化",
+    "original": "元のプロンプト",
+    "enhanced": "強化後のプロンプト",
+    "enhancedHint": "内容を編集してから適用できます。",
+    "loading": "AIで強化中…",
+    "accept": "適用する",
+    "reject": "キャンセル",
+    "regenerate": "再生成",
+    "empty": "強化結果がまだありません"
+  },
+  "enhance": {
+    "button": "PromptUPで強化",
+    "loading": "強化中…",
+    "success": "プロンプトを強化しました",
+    "errors": {
+      "NO_API_KEY": "設定画面でAPIキーを設定してください。",
+      "AUTH": "APIキーが無効です。設定を確認してください。",
+      "RATE_LIMIT": "レート制限に達しました。しばらくお待ちください。",
+      "TIMEOUT": "タイムアウトしました。再試行してください。",
+      "NETWORK": "ネットワークエラーが発生しました。",
+      "EMPTY_INPUT": "プロンプトを入力してから実行してください。",
+      "PROVIDER_ERROR": "AIプロバイダでエラーが発生しました。",
+      "UNKNOWN": "予期しないエラーが発生しました。"
+    }
+  },
+  "toast": {
+    "saved": "保存しました",
+    "deleted": "削除しました",
+    "inserted": "挿入しました",
+    "pinned": "ピン留めしました",
+    "unpinned": "ピン留めを解除しました"
+  },
+  "launcher": {
+    "tooltip": "PromptUP ライブラリを開く",
+    "ariaLabel": "PromptUP ライブラリを開く"
+  }
+}

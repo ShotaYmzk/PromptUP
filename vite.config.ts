@@ -1,0 +1,33 @@
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { crx } from "@crxjs/vite-plugin";
+import path from "node:path";
+import manifest from "./src/manifest";
+
+export default defineConfig({
+  plugins: [react(), crx({ manifest })],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
+  },
+  server: {
+    port: 5173,
+    strictPort: true,
+    hmr: {
+      port: 5173,
+    },
+  },
+  build: {
+    outDir: "dist",
+    emptyOutDir: true,
+    sourcemap: false,
+    rollupOptions: {
+      input: {
+        popup: path.resolve(__dirname, "src/ui/popup/index.html"),
+        sidepanel: path.resolve(__dirname, "src/ui/sidepanel/index.html"),
+        options: path.resolve(__dirname, "src/ui/options/index.html"),
+      },
+    },
+  },
+});

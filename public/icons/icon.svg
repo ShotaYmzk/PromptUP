@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <linearGradient id="spark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3" />
+      <stop offset="100%" stop-color="#ffffff" />
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#bg)" />
+  <path
+    d="M64 26l7.8 19.6L92 54l-20.2 8.4L64 82l-7.8-19.6L36 54l20.2-8.4L64 26z"
+    fill="url(#spark)"
+  />
+  <path
+    d="M96 72l3.6 8.4L108 84l-8.4 3.6L96 96l-3.6-8.4L84 84l8.4-3.6L96 72z"
+    fill="#ffffff"
+    opacity="0.85"
+  />
+  <path
+    d="M34 92l2.8 6.4L43 101l-6.2 2.6L34 110l-2.8-6.4L25 101l6.2-2.6L34 92z"
+    fill="#ffffff"
+    opacity="0.7"
+  />
+</svg>

@@ -1,0 +1,202 @@
+{
+  "app": {
+    "name": "PromptUP",
+    "tagline": "Enhance prompts in one click"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "confirm": "Confirm",
+    "back": "Back",
+    "add": "Add",
+    "search": "Search",
+    "loading": "Loading…",
+    "empty": "Nothing here yet",
+    "required": "Required",
+    "optional": "Optional",
+    "copy": "Copy",
+    "copied": "Copied"
+  },
+  "nav": {
+    "library": "Library",
+    "settings": "Settings",
+    "openSidePanel": "Open side panel",
+    "openOptions": "Open settings"
+  },
+  "popup": {
+    "recent": "Recently used",
+    "noRecent": "No recent prompts yet",
+    "openLibrary": "Open library",
+    "quickSearchHint": "Press {{key}} to quick search"
+  },
+  "library": {
+    "title": "Prompt Library",
+    "newPrompt": "New prompt",
+    "searchPlaceholder": "Search title, body, tags",
+    "allPrompts": "All prompts",
+    "uncategorized": "Uncategorized",
+    "newFolder": "New folder",
+    "folderName": "Folder name",
+    "renameFolder": "Rename folder",
+    "deleteFolder": "Delete folder",
+    "confirmDeleteFolder": "Delete this folder? Prompts inside will be moved to Uncategorized.",
+    "noPrompts": "No prompts match your filters",
+    "totalCount": "{{count}} prompts",
+    "insert": "Insert",
+    "append": "Append",
+    "appendHint": "Append to what you've already typed",
+    "enhance": "Enhance & insert",
+    "usageCount": "Used {{count}}x",
+    "sectionLabel": "Library",
+    "resizeSidebar": "Drag to resize · double-click to reset"
+  },
+  "pins": {
+    "sectionLabel": "Pinned",
+    "empty": "No pinned prompts yet",
+    "pin": "Pin",
+    "unpin": "Unpin",
+    "pinned": "Pinned",
+    "limitReached": "Pinning is limited to {{max}} prompts",
+    "count": "{{count}} / {{max}} pinned",
+    "remaining": "{{count}} slots left",
+    "sort": {
+      "label": "Sort",
+      "manual": "Manual",
+      "lastUsed": "Last used"
+    },
+    "insert": "Insert",
+    "append": "Append",
+    "appendHint": "Append to what you've already typed",
+    "enhance": "Enhance",
+    "overrides": "Uses pin-specific settings",
+    "configure": "Edit pin settings",
+    "variableBadge": "Has variables",
+    "delete": "Delete from library",
+    "confirmDelete": "Delete this prompt from the library entirely? (Click the 📌 icon again if you only want to unpin it.)",
+    "collapse": "Collapse",
+    "expand": "Expand",
+    "shortcutHint": "Press 1–9 to insert a top pin instantly",
+    "pinSettings": {
+      "title": "Pin-specific settings",
+      "description": "These apply only when inserting or enhancing from this pin. Library defaults are untouched.",
+      "modelOverride": "Model override",
+      "modelOverridePlaceholder": "Leave blank to use the default",
+      "temperature": "Temperature",
+      "temperatureHint": "0.0 (precise) to 2.0 (creative)",
+      "systemPromptOverride": "Extra system instruction",
+      "systemPromptPlaceholder": "e.g. For code generation. Use Python. Add a short explanation.",
+      "targetService": "Insert target",
+      "targetServiceAuto": "Active tab",
+      "targetServiceChatgpt": "ChatGPT",
+      "targetServiceClaude": "Claude",
+      "targetServiceGemini": "Gemini",
+      "reset": "Clear pin settings"
+    }
+  },
+  "prompt": {
+    "title": "Title",
+    "titlePlaceholder": "e.g. Polite email rewriter",
+    "body": "Prompt body",
+    "bodyPlaceholder": "Write your prompt. Use {{variable}} for placeholders.",
+    "description": "Description",
+    "descriptionPlaceholder": "Short description (optional)",
+    "tags": "Tags",
+    "tagsPlaceholder": "Comma separated (e.g. email, japanese)",
+    "folder": "Folder",
+    "variablesDetected": "Variables detected",
+    "noVariables": "No variables",
+    "createdAt": "Created",
+    "updatedAt": "Updated",
+    "errors": {
+      "titleRequired": "Title is required",
+      "bodyRequired": "Body is required",
+      "titleTooLong": "Title must be ≤ 100 characters",
+      "bodyTooLong": "Body must be ≤ 10,000 characters",
+      "descriptionTooLong": "Description must be ≤ 300 characters"
+    }
+  },
+  "variables": {
+    "dialogTitle": "Fill in the variables",
+    "insert": "Insert",
+    "preview": "Preview"
+  },
+  "options": {
+    "title": "PromptUP Settings",
+    "openFullPage": "Open in tab",
+    "sections": {
+      "provider": "AI Provider",
+      "appearance": "Appearance",
+      "enhancement": "Enhancement"
+    },
+    "provider": {
+      "label": "Active provider",
+      "openai": "OpenAI",
+      "anthropic": "Anthropic (Claude)",
+      "gemini": "Google Gemini",
+      "apiKey": "API key",
+      "apiKeyHint": "Stored locally on this device with lightweight obfuscation.",
+      "model": "Model",
+      "showKey": "Show",
+      "hideKey": "Hide",
+      "getKey": "Get API key",
+      "save": "Save settings",
+      "saved": "Settings saved"
+    },
+    "appearance": {
+      "theme": "Theme",
+      "themeDark": "Dark",
+      "themeLight": "Light",
+      "language": "Language",
+      "languageAuto": "Auto-detect from browser"
+    },
+    "enhancement": {
+      "systemPrompt": "Enhancement system prompt",
+      "systemPromptHint": "Core instruction sent as the provider's system prompt for every enhancement request.",
+      "userPromptPrefix": "Enhancement user prompt prefix",
+      "userPromptPrefixHint": "Prepended before <prompt>...</prompt> in the user message sent to the model.",
+      "customInstruction": "Custom enhancement instruction",
+      "customInstructionHint": "Appended to the base prompt that asks the AI to improve your input.",
+      "customInstructionPlaceholder": "e.g. Keep the tone professional and concise."
+    }
+  },
+  "review": {
+    "title": "Enhance with PromptUP",
+    "original": "Original prompt",
+    "enhanced": "Enhanced prompt",
+    "enhancedHint": "You can edit the text before applying.",
+    "loading": "Enhancing with AI…",
+    "accept": "Apply",
+    "reject": "Cancel",
+    "regenerate": "Regenerate",
+    "empty": "No enhancement yet"
+  },
+  "enhance": {
+    "button": "Enhance with PromptUP",
+    "loading": "Enhancing…",
+    "success": "Prompt enhanced",
+    "errors": {
+      "NO_API_KEY": "Please set an API key in PromptUP settings.",
+      "AUTH": "API key is invalid. Check your settings.",
+      "RATE_LIMIT": "Rate limit reached. Please wait a moment.",
+      "TIMEOUT": "The request timed out. Please try again.",
+      "NETWORK": "Network error. Please check your connection.",
+      "EMPTY_INPUT": "Type a prompt first, then enhance it.",
+      "PROVIDER_ERROR": "The AI provider returned an error.",
+      "UNKNOWN": "Something went wrong."
+    }
+  },
+  "toast": {
+    "saved": "Saved",
+    "deleted": "Deleted",
+    "inserted": "Inserted",
+    "pinned": "Pinned",
+    "unpinned": "Unpinned"
+  },
+  "launcher": {
+    "tooltip": "Open PromptUP library",
+    "ariaLabel": "Open PromptUP library"
+  }
+}

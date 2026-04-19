@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg-base: #0b0d12;
+  --color-bg-raised: #13161d;
+  --color-bg-hover: #1b1f29;
+  --color-surface: #161a23;
+  --color-surface-muted: #11141b;
+  --color-text: #f1f3f9;
+  --color-text-muted: #a5adbb;
+  --color-text-inverse: #0b0d12;
+  --color-border: #242a36;
+  --color-border-strong: #333a49;
+  --color-brand: #8b5cf6;
+  --color-brand-hover: #a78bfa;
+  --color-brand-fg: #ffffff;
+  --color-danger: #f87171;
+  --color-success: #34d399;
+  --color-warn: #fbbf24;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --color-bg-base: #f7f8fb;
+  --color-bg-raised: #ffffff;
+  --color-bg-hover: #eef0f6;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f2f4f9;
+  --color-text: #0f172a;
+  --color-text-muted: #52607a;
+  --color-text-inverse: #ffffff;
+  --color-border: #dee2ec;
+  --color-border-strong: #c5cbdb;
+  --color-brand: #6d28d9;
+  --color-brand-hover: #5b21b6;
+  --color-brand-fg: #ffffff;
+  --color-danger: #dc2626;
+  --color-success: #059669;
+  --color-warn: #d97706;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  min-width: 0;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg-base);
+  color: var(--color-text);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI",
+    "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+button {
+  font: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-border-strong);
+}
+
+.pup-scroll {
+  scrollbar-gutter: stable;
+}
+
+@layer components {
+  .pup-btn {
+    @apply inline-flex items-center justify-center gap-2 px-3 py-2 rounded-lg text-sm font-medium border transition-colors select-none;
+    @apply disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .pup-btn-primary {
+    @apply pup-btn bg-brand text-brand-fg border-transparent hover:bg-brand-hover;
+  }
+  .pup-btn-secondary {
+    @apply pup-btn bg-bg-raised text-text border-border hover:bg-bg-hover;
+  }
+  .pup-btn-ghost {
+    @apply pup-btn bg-transparent text-text border-transparent hover:bg-bg-hover;
+  }
+  .pup-btn-danger {
+    @apply pup-btn bg-transparent text-danger border-transparent hover:bg-[rgba(248,113,113,0.1)];
+  }
+  .pup-input {
+    @apply w-full rounded-lg border border-border bg-bg-raised px-3 py-2 text-sm text-text placeholder:text-text-muted;
+    @apply focus:border-brand focus:ring-0 outline-none;
+  }
+  .pup-textarea {
+    @apply pup-input min-h-[80px] leading-relaxed font-mono;
+  }
+  .pup-label {
+    @apply block text-xs font-semibold uppercase tracking-wide text-text-muted mb-1;
+  }
+  .pup-chip {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs bg-surface-muted border border-border text-text-muted;
+  }
+  .pup-chip-active {
+    @apply bg-brand text-brand-fg border-transparent;
+  }
+  .pup-card {
+    @apply rounded-xl border border-border bg-bg-raised p-3 transition-colors hover:bg-bg-hover;
+  }
+  .pup-section {
+    @apply bg-bg-raised border border-border rounded-xl p-4;
+  }
+}

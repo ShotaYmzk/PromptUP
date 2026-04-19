@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "PromptUP — AIプロンプト強化ツール",
+    "description": "The extension name shown in Chrome"
+  },
+  "extensionDescription": {
+    "message": "ChatGPT・Claude・Geminiで書いたプロンプトをワンクリックで強化・保存・再利用。",
+    "description": "The short description of the extension"
+  }
+}

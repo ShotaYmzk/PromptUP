@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "PromptUP — AI Prompt Genius",
+    "description": "The extension name shown in Chrome"
+  },
+  "extensionDescription": {
+    "message": "Enhance, save, and reuse your AI prompts with one click on ChatGPT, Claude and Gemini.",
+    "description": "The short description of the extension"
+  }
+}
